@@ -16,3 +16,21 @@ C:\Users\Dan\source\repos\PublixRDPEnhancer\PublixRDPEnhancer\obj\Release\net6.0
 C:\Users\Dan\source\repos\PublixRDPEnhancer\PublixRDPEnhancer\obj\Release\net6.0-windows\Publix RDP Enhancer.pdb
 C:\Users\Dan\source\repos\PublixRDPEnhancer\PublixRDPEnhancer\obj\Release\net6.0-windows\PublixRDPEnhancer.genruntimeconfig.cache
 C:\Users\Dan\source\repos\PublixRDPEnhancer\PublixRDPEnhancer\obj\Release\net6.0-windows\ref\Publix RDP Enhancer.dll
+D:\Official Portfolio\PUBRDP\PublixRDPEnhancer\PublixRDPEnhancer\bin\Release\net6.0-windows\Publix RDP Enhancer.exe
+D:\Official Portfolio\PUBRDP\PublixRDPEnhancer\PublixRDPEnhancer\bin\Release\net6.0-windows\Publix RDP Enhancer.deps.json
+D:\Official Portfolio\PUBRDP\PublixRDPEnhancer\PublixRDPEnhancer\bin\Release\net6.0-windows\Publix RDP Enhancer.runtimeconfig.json
+D:\Official Portfolio\PUBRDP\PublixRDPEnhancer\PublixRDPEnhancer\bin\Release\net6.0-windows\Publix RDP Enhancer.dll
+D:\Official Portfolio\PUBRDP\PublixRDPEnhancer\PublixRDPEnhancer\bin\Release\net6.0-windows\Publix RDP Enhancer.pdb
+D:\Official Portfolio\PUBRDP\PublixRDPEnhancer\PublixRDPEnhancer\obj\Release\net6.0-windows\PublixRDPEnhancer.csproj.AssemblyReference.cache
+D:\Official Portfolio\PUBRDP\PublixRDPEnhancer\PublixRDPEnhancer\obj\Release\net6.0-windows\PublixRDPEnhancer.mCanvas.resources
+D:\Official Portfolio\PUBRDP\PublixRDPEnhancer\PublixRDPEnhancer\obj\Release\net6.0-windows\PublixRDPEnhancer.Properties.Resources.resources
+D:\Official Portfolio\PUBRDP\PublixRDPEnhancer\PublixRDPEnhancer\obj\Release\net6.0-windows\PublixRDPEnhancer.csproj.GenerateResource.cache
+D:\Official Portfolio\PUBRDP\PublixRDPEnhancer\PublixRDPEnhancer\obj\Release\net6.0-windows\PublixRDPEnhancer.GeneratedMSBuildEditorConfig.editorconfig
+D:\Official Portfolio\PUBRDP\PublixRDPEnhancer\PublixRDPEnhancer\obj\Release\net6.0-windows\PublixRDPEnhancer.AssemblyInfoInputs.cache
+D:\Official Portfolio\PUBRDP\PublixRDPEnhancer\PublixRDPEnhancer\obj\Release\net6.0-windows\PublixRDPEnhancer.AssemblyInfo.cs
+D:\Official Portfolio\PUBRDP\PublixRDPEnhancer\PublixRDPEnhancer\obj\Release\net6.0-windows\PublixRDPEnhancer.csproj.CoreCompileInputs.cache
+D:\Official Portfolio\PUBRDP\PublixRDPEnhancer\PublixRDPEnhancer\obj\Release\net6.0-windows\Publix RDP Enhancer.dll
+D:\Official Portfolio\PUBRDP\PublixRDPEnhancer\PublixRDPEnhancer\obj\Release\net6.0-windows\refint\Publix RDP Enhancer.dll
+D:\Official Portfolio\PUBRDP\PublixRDPEnhancer\PublixRDPEnhancer\obj\Release\net6.0-windows\Publix RDP Enhancer.pdb
+D:\Official Portfolio\PUBRDP\PublixRDPEnhancer\PublixRDPEnhancer\obj\Release\net6.0-windows\PublixRDPEnhancer.genruntimeconfig.cache
+D:\Official Portfolio\PUBRDP\PublixRDPEnhancer\PublixRDPEnhancer\obj\Release\net6.0-windows\ref\Publix RDP Enhancer.dll

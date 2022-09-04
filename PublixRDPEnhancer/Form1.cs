@@ -34,6 +34,7 @@ namespace PublixRDPEnhancer
 
         string downloadPath = KnownFolders.GetPath(KnownFolder.Downloads);
         string[] rdpFiles;
+        bool connected;
 
         int ver, rev;
 
@@ -42,7 +43,7 @@ namespace PublixRDPEnhancer
             InitializeComponent();
 
             ver = 1;
-            rev = 0;
+            rev = 1;
             versionDisplay.Text = "Version: " + ver + "." + rev;
 
             // title logic
@@ -120,7 +121,8 @@ namespace PublixRDPEnhancer
 
         private void connectButton_Click(object sender, EventArgs e)
         {
-            doEnhancedConnect();
+            if (!connected)
+                doEnhancedConnect();
         }
 
         private void aboutButton_Click(object sender, EventArgs e)
@@ -135,12 +137,16 @@ namespace PublixRDPEnhancer
             // the RDP process is not opened / running
             if (processes.Length == 0)
             {
+                connected = false;
+                connectButton.Enabled = true;
                 this.connectButton.BackgroundImage = global::PublixRDPEnhancer.Properties.Resources.preconnectButton;
                 estSessionDis.Text = Properties.Resources.notConnected;
                 estSessionDis.ForeColor = System.Drawing.Color.Black;
             }
             else // process is running
             {
+                connected = true;
+                connectButton.Enabled = false;
                 this.connectButton.BackgroundImage = global::PublixRDPEnhancer.Properties.Resources.connectButton;
                 estSessionDis.Text = Properties.Resources.sessionEst;
                 estSessionDis.ForeColor = System.Drawing.Color.Green;

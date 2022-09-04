@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("PublixRDPEnhancer")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("Publix RDP Enhancer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
-[assembly: System.Reflection.AssemblyProductAttribute("PublixRDPEnhancer")]
-[assembly: System.Reflection.AssemblyTitleAttribute("PublixRDPEnhancer")]
+[assembly: System.Reflection.AssemblyProductAttribute("Publix RDP Enhancer")]
+[assembly: System.Reflection.AssemblyTitleAttribute("Publix RDP Enhancer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 [assembly: System.Runtime.Versioning.TargetPlatformAttribute("Windows7.0")]
 [assembly: System.Runtime.Versioning.SupportedOSPlatformAttribute("Windows7.0")]

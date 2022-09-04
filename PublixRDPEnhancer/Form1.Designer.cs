@@ -83,6 +83,7 @@
             // 
             this.publixTitle.BackColor = System.Drawing.SystemColors.Control;
             this.publixTitle.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.publixTitle.Enabled = false;
             this.publixTitle.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
             this.publixTitle.ForeColor = System.Drawing.Color.Green;
             this.publixTitle.Location = new System.Drawing.Point(58, 8);

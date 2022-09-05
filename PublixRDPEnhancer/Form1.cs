@@ -51,6 +51,7 @@ namespace PublixRDPEnhancer
             AppendText(publixTitle, "Publix ", System.Drawing.Color.Green);
             AppendText(publixTitle, "RDP ", System.Drawing.Color.Blue);
             AppendText(publixTitle, "Enhancer", System.Drawing.Color.Black);
+            publixTitle.SelectionAlignment = HorizontalAlignment.Center;
 
         }
         private void doEnhancedConnect()

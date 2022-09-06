@@ -153,7 +153,6 @@ namespace PublixRDPEnhancer
                 estSessionDis.ForeColor = System.Drawing.Color.Green;
             }
         }
-
         public void AppendText(RichTextBox box, string text, Color color)
         {
             box.SelectionStart = box.TextLength;

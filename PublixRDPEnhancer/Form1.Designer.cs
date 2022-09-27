@@ -177,6 +177,8 @@
             this.Controls.Add(this.enableMic);
             this.Controls.Add(this.label2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(303, 531);
+            this.MinimumSize = new System.Drawing.Size(303, 531);
             this.Name = "mCanvas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Publix RDP Enhancer - By SlinkSoft";

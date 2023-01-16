@@ -70,6 +70,15 @@ namespace PublixRDPEnhancer.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The Auto Click function will automatically click wherever your mouse pointer is randomly between 10 to 60 seconds (or 10000 ms to 60000 ms); this is to ensure your RDP session stays alive when you are away from keyboard and locked your desktop (ex. away for lunch, appointment, etc.). I have experienced locks outs that happen from time to time within 2 minutes or so on my old personal laptop, which can be frustrating as you would need to download a new RDP file (and possibly log back in to Citrix to do so) a [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string autoClickHelp {
+            get {
+                return ResourceManager.GetString("autoClickHelp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap connectButton {
@@ -114,6 +123,35 @@ namespace PublixRDPEnhancer.Properties {
         internal static string sessionEst {
             get {
                 return ResourceManager.GetString("sessionEst", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Start Auto Click To Keep Session Alive.
+        /// </summary>
+        internal static string startAC {
+            get {
+                return ResourceManager.GetString("startAC", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Stop Auto Click To Keep Session Alive.
+        /// </summary>
+        internal static string stopAC {
+            get {
+                return ResourceManager.GetString("stopAC", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to WARNING: Clicking Connect will delete all RDP files in your Downloads directory except the latest one (not including RDP files within subfolders of the directory). This program will modify the RDP file contents to set your desired settings, then automatically open and establish the RDP session.
+        ///
+        ///Make sure you have downloaded your machine&apos;s latest RDP Session File or an error may occur!.
+        /// </summary>
+        internal static string warningInfo {
+            get {
+                return ResourceManager.GetString("warningInfo", resourceCulture);
             }
         }
     }

@@ -38,12 +38,29 @@ namespace PublixRDPEnhancer
 
         int ver, rev;
 
+        // AutoClick vars
+        int acInterval, acIntervalDis;
+        long acElapsed;
+        bool acEnabled;
+        Random r = new Random();
+        Stopwatch sw = new Stopwatch();
+
+        // Mouse Click DLL imports
+
+        [DllImport("user32.dll", CharSet = CharSet.Auto, CallingConvention = CallingConvention.StdCall)]
+        public static extern void mouse_event(uint dwFlags, uint dx, uint dy, uint cButtons, uint dwExtraInfo);
+        //Mouse actions
+        private const int MOUSEEVENTF_LEFTDOWN = 0x02;
+        private const int MOUSEEVENTF_LEFTUP = 0x04;
+        private const int MOUSEEVENTF_RIGHTDOWN = 0x08;
+        private const int MOUSEEVENTF_RIGHTUP = 0x10;
+
         public mCanvas()
         {
             InitializeComponent();
 
             ver = 1;
-            rev = 1;
+            rev = 4;
             versionDisplay.Text = "Version: " + ver + "." + rev;
 
             // title logic
@@ -153,6 +170,78 @@ namespace PublixRDPEnhancer
                 estSessionDis.ForeColor = System.Drawing.Color.Green;
             }
         }
+
+        private void killProcess_Click(object sender, EventArgs e)
+        {
+            foreach (var p in Process.GetProcessesByName("mstsc"))
+            {
+                p.Kill();
+            }
+        }
+
+        private void helpAutoClick_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(Properties.Resources.autoClickHelp, "Auto Click Help");
+        }
+
+
+
+        private void ACButton_Click(object sender, EventArgs e)
+        {
+            if (!acEnabled)
+            {
+                acEnabled = true;
+                ACButton.Text = Properties.Resources.stopAC;
+                clickTimerDis.Visible = true;
+
+                // set initial interval
+                acInterval = r.Next(10000, 60001); // between 10000 ms to 60001 (exclusive so 60000) ms ; or 10 to 60 seconds
+                acIntervalDis = acInterval;
+                autoClickTimer.Interval = acInterval;
+
+                // start the timers
+                autoClickTDisplay.Start();
+                autoClickTimer.Start();
+                sw.Start();
+
+            }
+            else if (acEnabled)
+            {
+                acEnabled = false;
+                ACButton.Text = Properties.Resources.startAC;
+                clickTimerDis.Visible = false;
+
+                // stop the timers
+                autoClickTDisplay.Stop();
+                autoClickTimer.Stop();
+                sw.Stop();
+                sw.Restart();
+
+            }
+        }
+
+        private void autoClickTimer_Tick(object sender, EventArgs e)
+        {
+            // replicate click
+            LeftMouseClick(Cursor.Position.X, Cursor.Position.Y);
+
+            // new interval and restart stop watch
+            acInterval = r.Next(10000, 60001); // between 10000 ms to 60001 (exclusive so 60000) ms ; or 10 to 60 seconds
+            autoClickTimer.Interval = acInterval;
+            sw.Stop();
+            sw.Restart();
+            sw.Start();
+            
+        }
+
+        private void autoClickTDisplay_Tick(object sender, EventArgs e)
+        {
+            acElapsed = ((acInterval / 1000) - (sw.ElapsedMilliseconds / 1000));
+
+            if (acElapsed != -1) // prevent display timer from going to negative territory
+                clickTimerDis.Text = "Next Click In:\n" + ((acInterval/1000) - (sw.ElapsedMilliseconds/1000)) + " seconds";
+        }
+
         public void AppendText(RichTextBox box, string text, Color color)
         {
             box.SelectionStart = box.TextLength;
@@ -161,6 +250,13 @@ namespace PublixRDPEnhancer
             box.SelectionColor = color;
             box.AppendText(text);
             box.SelectionColor = box.ForeColor;
+        }
+
+        // simulates mouse click
+        public static void LeftMouseClick(int xpos, int ypos)
+        {
+            mouse_event(MOUSEEVENTF_LEFTDOWN, (uint)xpos, (uint)ypos, 0, 0);
+            mouse_event(MOUSEEVENTF_LEFTUP, (uint)xpos, (uint)ypos, 0, 0);
         }
     }
 }

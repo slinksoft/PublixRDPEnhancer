@@ -215,7 +215,7 @@ namespace PublixRDPEnhancer
                 autoClickTDisplay.Stop();
                 autoClickTimer.Stop();
                 sw.Stop();
-                sw.Restart();
+                sw.Reset();
 
             }
         }

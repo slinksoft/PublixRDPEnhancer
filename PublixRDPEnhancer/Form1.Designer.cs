@@ -45,6 +45,7 @@
             this.ACButton = new System.Windows.Forms.Button();
             this.helpAutoClick = new System.Windows.Forms.Button();
             this.toolTipper = new System.Windows.Forms.ToolTip(this.components);
+            this.enableCam = new System.Windows.Forms.CheckBox();
             this.clickTimerDis = new System.Windows.Forms.Label();
             this.autoClickTimer = new System.Windows.Forms.Timer(this.components);
             this.autoClickTDisplay = new System.Windows.Forms.Timer(this.components);
@@ -55,9 +56,10 @@
             this.enableMic.AutoSize = true;
             this.enableMic.Checked = true;
             this.enableMic.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.enableMic.Location = new System.Drawing.Point(128, 74);
+            this.enableMic.Location = new System.Drawing.Point(50, 104);
+            this.enableMic.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.enableMic.Name = "enableMic";
-            this.enableMic.Size = new System.Drawing.Size(166, 19);
+            this.enableMic.Size = new System.Drawing.Size(209, 24);
             this.enableMic.TabIndex = 0;
             this.enableMic.Text = "Enable Remote Mic Device";
             this.toolTipper.SetToolTip(this.enableMic, "Enable/Disable Mic For Your Session");
@@ -68,9 +70,10 @@
             this.enableMultiMonitor.AutoSize = true;
             this.enableMultiMonitor.Checked = true;
             this.enableMultiMonitor.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.enableMultiMonitor.Location = new System.Drawing.Point(142, 99);
+            this.enableMultiMonitor.Location = new System.Drawing.Point(272, 104);
+            this.enableMultiMonitor.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.enableMultiMonitor.Name = "enableMultiMonitor";
-            this.enableMultiMonitor.Size = new System.Drawing.Size(134, 19);
+            this.enableMultiMonitor.Size = new System.Drawing.Size(168, 24);
             this.enableMultiMonitor.TabIndex = 1;
             this.enableMultiMonitor.Text = "Enable Dual Monitor";
             this.toolTipper.SetToolTip(this.enableMultiMonitor, "Enable/Disable Dual Monitors For Your Session");
@@ -81,9 +84,10 @@
             this.connectButton.BackgroundImage = global::PublixRDPEnhancer.Properties.Resources.preconnectButton;
             this.connectButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.connectButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.connectButton.Location = new System.Drawing.Point(159, 120);
+            this.connectButton.Location = new System.Drawing.Point(182, 160);
+            this.connectButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.connectButton.Name = "connectButton";
-            this.connectButton.Size = new System.Drawing.Size(101, 89);
+            this.connectButton.Size = new System.Drawing.Size(115, 119);
             this.connectButton.TabIndex = 2;
             this.toolTipper.SetToolTip(this.connectButton, "Connect!");
             this.connectButton.UseVisualStyleBackColor = true;
@@ -96,19 +100,20 @@
             this.publixTitle.Enabled = false;
             this.publixTitle.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
             this.publixTitle.ForeColor = System.Drawing.Color.Green;
-            this.publixTitle.Location = new System.Drawing.Point(66, 13);
+            this.publixTitle.Location = new System.Drawing.Point(75, 17);
+            this.publixTitle.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.publixTitle.Name = "publixTitle";
             this.publixTitle.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.publixTitle.Size = new System.Drawing.Size(289, 22);
+            this.publixTitle.Size = new System.Drawing.Size(330, 29);
             this.publixTitle.TabIndex = 5;
             this.publixTitle.Text = "Publix RDP Enhancer";
             // 
             // warning
             // 
             this.warning.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.warning.Location = new System.Drawing.Point(39, 307);
+            this.warning.Location = new System.Drawing.Point(45, 409);
             this.warning.Name = "warning";
-            this.warning.Size = new System.Drawing.Size(339, 168);
+            this.warning.Size = new System.Drawing.Size(387, 224);
             this.warning.TabIndex = 6;
             this.warning.Text = resources.GetString("warning.Text");
             this.warning.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -116,18 +121,19 @@
             // versionDisplay
             // 
             this.versionDisplay.AutoSize = true;
-            this.versionDisplay.Location = new System.Drawing.Point(341, 587);
+            this.versionDisplay.Location = new System.Drawing.Point(390, 783);
             this.versionDisplay.Name = "versionDisplay";
-            this.versionDisplay.Size = new System.Drawing.Size(66, 15);
+            this.versionDisplay.Size = new System.Drawing.Size(83, 20);
             this.versionDisplay.TabIndex = 7;
             this.versionDisplay.Text = "Version: 0.0";
             this.toolTipper.SetToolTip(this.versionDisplay, "The Current Version Number Of This Program");
             // 
             // aboutButton
             // 
-            this.aboutButton.Location = new System.Drawing.Point(165, 265);
+            this.aboutButton.Location = new System.Drawing.Point(189, 353);
+            this.aboutButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.aboutButton.Name = "aboutButton";
-            this.aboutButton.Size = new System.Drawing.Size(87, 42);
+            this.aboutButton.Size = new System.Drawing.Size(99, 56);
             this.aboutButton.TabIndex = 8;
             this.aboutButton.Text = "What Does This Do?";
             this.toolTipper.SetToolTip(this.aboutButton, "Help");
@@ -137,9 +143,9 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(99, 22);
+            this.label2.Location = new System.Drawing.Point(113, 29);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(228, 67);
+            this.label2.Size = new System.Drawing.Size(261, 89);
             this.label2.TabIndex = 9;
             this.label2.Text = "By: SlinkSoft - A Publix Software Engineer";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -155,9 +161,9 @@
             // 
             this.estSessionDis.Font = new System.Drawing.Font("Segoe UI", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.estSessionDis.ForeColor = System.Drawing.Color.Black;
-            this.estSessionDis.Location = new System.Drawing.Point(86, 233);
+            this.estSessionDis.Location = new System.Drawing.Point(98, 311);
             this.estSessionDis.Name = "estSessionDis";
-            this.estSessionDis.Size = new System.Drawing.Size(248, 19);
+            this.estSessionDis.Size = new System.Drawing.Size(283, 25);
             this.estSessionDis.TabIndex = 10;
             this.estSessionDis.Text = "N/A";
             this.estSessionDis.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -168,18 +174,19 @@
             this.statusLabelDis.AutoSize = true;
             this.statusLabelDis.Font = new System.Drawing.Font("Segoe UI", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
             this.statusLabelDis.ForeColor = System.Drawing.Color.Black;
-            this.statusLabelDis.Location = new System.Drawing.Point(185, 212);
+            this.statusLabelDis.Location = new System.Drawing.Point(211, 283);
             this.statusLabelDis.Name = "statusLabelDis";
-            this.statusLabelDis.Size = new System.Drawing.Size(49, 19);
+            this.statusLabelDis.Size = new System.Drawing.Size(60, 23);
             this.statusLabelDis.TabIndex = 11;
             this.statusLabelDis.Text = "Status";
             this.statusLabelDis.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // killProcess
             // 
-            this.killProcess.Location = new System.Drawing.Point(124, 477);
+            this.killProcess.Location = new System.Drawing.Point(142, 636);
+            this.killProcess.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.killProcess.Name = "killProcess";
-            this.killProcess.Size = new System.Drawing.Size(172, 42);
+            this.killProcess.Size = new System.Drawing.Size(197, 56);
             this.killProcess.TabIndex = 12;
             this.killProcess.Text = "Kill Hanging/Unresponsive RDP Processes";
             this.toolTipper.SetToolTip(this.killProcess, "Kill Unresponsive RDP Processes");
@@ -188,9 +195,10 @@
             // 
             // ACButton
             // 
-            this.ACButton.Location = new System.Drawing.Point(124, 533);
+            this.ACButton.Location = new System.Drawing.Point(142, 711);
+            this.ACButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ACButton.Name = "ACButton";
-            this.ACButton.Size = new System.Drawing.Size(172, 42);
+            this.ACButton.Size = new System.Drawing.Size(197, 56);
             this.ACButton.TabIndex = 13;
             this.ACButton.Text = "Start Auto Click To Keep Session Alive";
             this.toolTipper.SetToolTip(this.ACButton, "Auto Click Function");
@@ -199,20 +207,33 @@
             // 
             // helpAutoClick
             // 
-            this.helpAutoClick.Location = new System.Drawing.Point(302, 533);
+            this.helpAutoClick.Location = new System.Drawing.Point(345, 711);
+            this.helpAutoClick.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.helpAutoClick.Name = "helpAutoClick";
-            this.helpAutoClick.Size = new System.Drawing.Size(26, 22);
+            this.helpAutoClick.Size = new System.Drawing.Size(30, 29);
             this.helpAutoClick.TabIndex = 14;
             this.helpAutoClick.Text = "?";
             this.toolTipper.SetToolTip(this.helpAutoClick, "Auto Click Help and Explanation");
             this.helpAutoClick.UseVisualStyleBackColor = true;
             this.helpAutoClick.Click += new System.EventHandler(this.helpAutoClick_Click);
             // 
+            // enableCam
+            // 
+            this.enableCam.AutoSize = true;
+            this.enableCam.Location = new System.Drawing.Point(151, 131);
+            this.enableCam.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.enableCam.Name = "enableCam";
+            this.enableCam.Size = new System.Drawing.Size(200, 24);
+            this.enableCam.TabIndex = 16;
+            this.enableCam.Text = "Enable Remote Web Cam";
+            this.toolTipper.SetToolTip(this.enableCam, "Enable/Disable Mic For Your Session");
+            this.enableCam.UseVisualStyleBackColor = true;
+            // 
             // clickTimerDis
             // 
-            this.clickTimerDis.Location = new System.Drawing.Point(18, 533);
+            this.clickTimerDis.Location = new System.Drawing.Point(21, 711);
             this.clickTimerDis.Name = "clickTimerDis";
-            this.clickTimerDis.Size = new System.Drawing.Size(100, 42);
+            this.clickTimerDis.Size = new System.Drawing.Size(114, 56);
             this.clickTimerDis.TabIndex = 15;
             this.clickTimerDis.Text = "Next Click In:\r\n0 seconds";
             this.clickTimerDis.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -230,9 +251,10 @@
             // 
             // mCanvas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(416, 614);
+            this.ClientSize = new System.Drawing.Size(480, 811);
+            this.Controls.Add(this.enableCam);
             this.Controls.Add(this.clickTimerDis);
             this.Controls.Add(this.helpAutoClick);
             this.Controls.Add(this.ACButton);
@@ -248,8 +270,9 @@
             this.Controls.Add(this.enableMic);
             this.Controls.Add(this.label2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(432, 653);
-            this.MinimumSize = new System.Drawing.Size(432, 653);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MaximumSize = new System.Drawing.Size(498, 858);
+            this.MinimumSize = new System.Drawing.Size(498, 858);
             this.Name = "mCanvas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Publix RDP Enhancer - By SlinkSoft";
@@ -278,5 +301,6 @@
         private Label clickTimerDis;
         private System.Windows.Forms.Timer autoClickTimer;
         private System.Windows.Forms.Timer autoClickTDisplay;
+        private CheckBox enableCam;
     }
 }

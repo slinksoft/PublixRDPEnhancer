@@ -60,7 +60,7 @@ namespace PublixRDPEnhancer
             InitializeComponent();
 
             ver = 1;
-            rev = 4;
+            rev = 6;
             versionDisplay.Text = "Version: " + ver + "." + rev;
 
             // title logic
@@ -119,7 +119,17 @@ namespace PublixRDPEnhancer
                     rdpContents += currLine + "\n";
                 }
                 read.Close();
-               
+
+                /* Check if remote web cam option is enabled; if so, add the setting to the end of the rdpContents ; as it will not exist in a fresh .rdp file from Citrix
+                   There is no need to make a check for if the option isnt enabled since the .rdp file is stale after establishing a connection at least once with it */
+                if (enableCam.Checked)
+                {
+                    rdpContents += "camerastoredirect:s:*" + "\n";
+                }
+
+                // Trim rdpContents before writing it to the .rdp file
+                rdpContents = rdpContents.Trim();
+
                 // Write updated contents to RDP file
                 StreamWriter write = new StreamWriter(rdpFiles[0]);
                 write.Write(rdpContents);
